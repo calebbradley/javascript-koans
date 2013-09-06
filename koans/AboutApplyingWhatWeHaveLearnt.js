@@ -48,21 +48,27 @@ describe("About Applying What We Have Learnt", function() {
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)", function () {
 
-    var sum = 0;
-    for(var i=1; i<1000; i+=1) {
-      if (i % 3 === 0 || i % 5 === 0) {
-        sum += i;
-      }
-    }
+    var sum = _([_.range(3, 1000, 3), _.range(5, 1000, 5)]).chain()
+        .flatten()
+        .reduce(function(memo, num){
+          if(num % 3 === 0 & num % 5 === 0) {
+            return memo + (num*.5); 
+          } else {
+            return memo + num;
+          }; 
+        })
+        .value();
 
-    expect(sum).toBe(1);
-  });
+       
+
+    expect(sum).toBe(233168);
+
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
     var sum = 0;    /* try chaining range() and reduce() */
 
-    expect(233168).toBe(233168);
+    expect(233168).toBe(sum);
   });
 
   /*********************************************************************************/
