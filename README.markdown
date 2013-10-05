@@ -1,3 +1,7 @@
+These Koans were given to me as Homework. I found most of them to be thought provoking but still easy-ish. 
+  There were a few towards the very end that had me stumped and scrambling. Good times overall! :)
+
+
 # Javascript Koans - koans to learn Javascript (the good bits) #
 
 Based on Edgecase's fantastic 
